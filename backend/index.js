@@ -24,11 +24,18 @@ app.get('/', (req,res)=>{
     })
 })
 
-const corsOption = {
-    origin: process.env.FRONTEND_URI,
-    credentials: true
-}
-app.use(cors(corsOption));
+const cors = require('cors');
+const express = require('express');
+
+app.use(cors({ origin: '*' }));
+
+app.use(cors({
+  origin: 'https://luxury-heliotrope-4e7a81.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
+
+
 
 
 app.use('/admin', adminRoute)
