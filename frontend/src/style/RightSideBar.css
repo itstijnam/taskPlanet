@@ -1,0 +1,77 @@
+.rightSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow-y: scroll;
+}
+.rightSideCard{
+    height: 30%;
+    width: 60%;
+    border: 2px solid black;
+    box-shadow: 2px 2px 8px black;
+    border-radius: 10px;
+
+}
+.usernameBadge{
+    background-color: #333333;
+    color: goldenrod;
+    border-radius: 1rem;
+    padding: 0.2% 1%;
+    text-align: center;
+}
+.imgBox {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    width: 100%;
+    max-height: 150px;
+}
+
+.imgs {
+    border: 2px solid #333333;
+    border-radius: 10%;
+    flex-shrink: 0;
+    min-width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgs img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.imgBox::-webkit-scrollbar {
+    height: 1px;
+}
+
+.imgBox::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #ff6f61, #ffcc00);
+    border-radius: 4px;
+}
+
+.imgBox::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #4caf50, #2196f3);
+    border-radius: 4px;
+}
+
+.imgBox::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #2196f3, #ff5722);
+}
+
+.imgBox {
+    scrollbar-width: thin;
+    scrollbar-color: red white;
+}
+
+.imgBox:hover::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #2196f3, #ff5722);
+}

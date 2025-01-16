@@ -1,0 +1,107 @@
+.header{
+    background-color: #333333;
+    color: white;
+    width: 100vw;
+}
+.navBox{
+height: 3rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0rem 4rem;
+flex-wrap: wrap;
+}
+.logoBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.imageBox{
+    position: relative;
+    height: 2.5rem;
+}
+.imageBox img{
+    position: relative;
+    height: 100%;
+}
+.ulNav{
+    display: flex;
+    column-gap: 0.9rem;
+    color: white;
+    background: linear-gradient(90deg, rgba(72, 72, 72, 0.292), rgba(72, 72, 72, 0.456), rgba(72, 72, 72, 0.703), rgba(72, 72, 72, 0.878), rgb(72, 72, 72));
+    box-shadow: 0px 1px 5px pink;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.6rem;
+}
+.ulNav li{
+    cursor: pointer;
+    transition: 1s;
+}
+.ulNav li:hover{
+    cursor: pointer;
+    color: red;
+}
+.mainGrnd{
+    height: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mainCard{
+     border-radius: 0.6rem;
+     box-shadow: 5px 5px 10px black;
+     height: 25rem;
+     width: 70rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     column-gap: 2rem;
+     display: flex;
+     flex-wrap: wrap;
+}
+form{
+    position: relative;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.formDetail{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+}
+button{
+    width: 7rem;
+    height: 2.6rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #091a27;
+    color: white;
+    font-size: larger;
+    font-family: cursive;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    text-shadow: 2px 2px 8px red;
+}
+input{
+    position: relative;
+    width: 40%;
+    height: 2rem;
+    padding: 0.055rem 0.6rem;
+    border: 1px solid rgba(0, 0, 0, 0.762);
+    border-radius: 0.4rem;
+}
+h3{
+    font-size: 1.9rem;
+}

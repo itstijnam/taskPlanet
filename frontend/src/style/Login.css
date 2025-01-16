@@ -1,0 +1,18 @@
+.createAdminNavigation{
+    width: 17rem;
+    height: 2.6rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #091a27;
+    color: white;
+    font-size: larger;
+    font-family: cursive;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.createAdminNavigation:hover{
+    background-color: white;
+    text-shadow: 2px 2px 8px red;
+}

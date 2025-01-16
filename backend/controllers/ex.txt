@@ -1,0 +1,23 @@
+
+        
+        const uploadDir = path.join('uploads', social_media_handle);
+        if (!fs.existsSync(uploadDir)) {
+            fs.mkdirSync(uploadDir, { recursive: true });
+        }
+
+        const imagePaths = [];
+        for (const image of images) {
+            const outputFileName = `${Date.now()}-${Math.round(Math.random() * 1e9)}.jpg`;
+            const outputPath = path.join(uploadDir, outputFileName);
+
+            await sharp(image.path)
+                .resize({ width: 800, height: 800, fit: 'inside' })
+                .toFormat('jpg', { quality: 80 })
+                .toFile(outputPath);
+
+            const baseURL = process.env.BACKEND_URI
+            const relativePath = path.join(uploadDir, outputFileName).replace(/\\/g, '/');
+            const fullURL = `${baseURL}/${relativePath}`;
+
+            imagePaths.push(fullURL);
+        }
