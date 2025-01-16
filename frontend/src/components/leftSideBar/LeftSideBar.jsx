@@ -13,7 +13,7 @@ function LeftSideBar() {
 
   const logoutHandler = async ()=>{
     try {
-        const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/admin/logout`, {withCredentials:true})
+        const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}admin/logout`, {withCredentials:true})
       if(res.data.success){
         dispatch(setAuthAdmin(null));
         navigate('/')
