@@ -16,7 +16,6 @@ function Home() {
   const [images, setImages] = useState([]);
   const dispatch = useDispatch()
   const { userSubmit } = useSelector((store) => store.post)
-  console.log('home: ', userSubmit)
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
