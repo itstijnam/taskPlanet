@@ -30,7 +30,7 @@ const express = require('express');
 app.use(cors({ origin: '*' }));
 
 app.use(cors({
-  origin: 'https://luxury-heliotrope-4e7a81.netlify.app',
+  origin: process.env.FRONTEND_URI,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
