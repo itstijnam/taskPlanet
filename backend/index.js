@@ -21,7 +21,10 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URI,
+    origin: [
+      process.env.FRONTEND_URI || "https://task-planet-8auk.vercel.app",
+      "http://localhost:3000",
+    ],    
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
