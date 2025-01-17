@@ -1,40 +1,17 @@
 {
-    "installCommand": "npm install --legacy-peer-deps",
-    "version": 2,
-    "builds": [
+  "installCommand": "npm install --legacy-peer-deps",
+  "version": 2,
+  "builds": [
       {
-        "src": "index.js",
-        "use": "@vercel/node"
+          "src": "index.js",
+          "use": "@vercel/node"
       },
       {
-        "src": "src/**/*",
-        "use": "@vercel/static"
+          "src": "src/**/*",
+          "use": "@vercel/static"
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
-    ],
-    "headers": [
-      {
-        "source": "/admin/(.*)",
-        "headers": [
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "https://luxury-heliotrope-4e7a81.netlify.app"
-          },
-          {
-            "key": "Access-Control-Allow-Methods",
-            "value": "GET, POST, PUT, DELETE, OPTIONS"
-          },
-          {
-            "key": "Access-Control-Allow-Headers",
-            "value": "Content-Type, Authorization"
-          }
-        ]
-      }
-    ]
-  }
-  
+  ],
+  "routes": [
+      { "src": "/(.*)", "dest": "/" }
+  ]
+}
