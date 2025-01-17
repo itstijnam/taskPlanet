@@ -27,7 +27,7 @@ function Home() {
     }
     
     try {
-      const res = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}user/create`, formData, {
+      const res = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/user/create`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
