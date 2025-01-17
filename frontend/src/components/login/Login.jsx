@@ -29,7 +29,7 @@ function Login() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/admin/login`,
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}admin/login`,
         { username, password },
         {
           headers: { 'Content-Type': 'application/json' },

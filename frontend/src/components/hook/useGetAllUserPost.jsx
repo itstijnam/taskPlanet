@@ -10,7 +10,7 @@ const useGetAllUserPost = () => {
         const fetchAllUserPost = async () => {
             try {
                 const res = await axios.get(
-                    `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/admin/all-users`,
+                    `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}admin/all-users`,
                     { withCredentials: true }
                 );
                 if (res.data.success) {

@@ -30,7 +30,7 @@ function CreateAdminAccount() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/admin/register`,
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}admin/register`,
         { username, email, password },
         {
           headers: { 'Content-Type': 'application/json' },
