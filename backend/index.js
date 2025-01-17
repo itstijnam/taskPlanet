@@ -14,22 +14,19 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// CORS Middleware
 app.use(
   cors({
-    origin: process.env.FRONTEND_URI, // Allow your frontend URL
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    credentials: true, // Allow credentials (cookies, etc.)
+    credentials: true,
   })
 );
 
-// Test Route
 app.get("/", (req, res) => {
   return res.status(201).json({
     message: "I am from server",
@@ -37,11 +34,9 @@ app.get("/", (req, res) => {
   });
 });
 
-// Routes
 app.use("/admin", adminRoute);
 app.use("/user", postRoute);
 
-// Start Server
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   connectDB();
